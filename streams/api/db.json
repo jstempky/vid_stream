@@ -1,0 +1,26 @@
+{
+  "streams": [
+    {
+      "title": "test",
+      "description": "testagain",
+      "id": 1
+    },
+    {
+      "title": "test",
+      "description": "atestagain",
+      "id": 2
+    },
+    {
+      "title": "trying",
+      "description": "again",
+      "userId": "114926404827810987304",
+      "id": 3
+    },
+    {
+      "title": "trying",
+      "description": "again",
+      "userId": "114926404827810987304",
+      "id": 4
+    }
+  ]
+}
