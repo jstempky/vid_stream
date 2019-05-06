@@ -1,26 +1,22 @@
 {
   "streams": [
     {
-      "title": "test",
-      "description": "testagain",
+      "title": "Joey",
+      "description": "Is Nice.",
+      "userId": "114926404827810987304",
       "id": 1
     },
     {
-      "title": "test",
-      "description": "atestagain",
+      "title": "Jacob",
+      "description": "is not nice?",
+      "userId": "114926404827810987304",
       "id": 2
     },
     {
-      "title": "trying",
-      "description": "again",
+      "title": "after",
+      "description": "refactor",
       "userId": "114926404827810987304",
       "id": 3
-    },
-    {
-      "title": "trying",
-      "description": "again",
-      "userId": "114926404827810987304",
-      "id": 4
     }
   ]
 }
