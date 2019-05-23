@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import Modal from '../Modal';
 import history from '../../history';
-import { fetchStream, deleteStream } from '../../actions';
+import { fetchSet, deleteSet } from '../../actions';
 
 // Empty tags '<>, </>' are <React.Fragment> shorthand
-class StreamDelete extends Component {
+class SetDelete extends Component {
   componentDidMount(){
-    this.props.fetchStream(this.props.match.params.id);
+    this.props.fetchSet(this.props.match.params.id);
   }
 
   renderActions() {
@@ -17,7 +17,7 @@ class StreamDelete extends Component {
     return (
     <React.Fragment>
       <button
-        onClick={() => this.props.deleteStream(id)}
+        onClick={() => this.props.deleteSet(id)}
         className="ui button negative"
       >
           Delete
@@ -28,18 +28,18 @@ class StreamDelete extends Component {
   }
 
   renderContent(){
-    if(!this.props.stream){
-      return 'Are you sure you want to delete this stream?'
+    if(!this.props.set){
+      return 'Are you sure you want to delete this set?'
     }
 
-    return `Are you sure you want to delete stream: ${this.props.stream.title}`
+    return `Are you sure you want to delete set: ${this.props.set.exercise}`
   }
 
 
   render() {
     return (
       <Modal
-        title="Delete Stream"
+        title="Delete Set"
         content={this.renderContent()}
         actions={this.renderActions()}
         onDismiss={() => history.push('/')}
@@ -49,9 +49,9 @@ class StreamDelete extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  return { stream: state.streams[ownProps.match.params.id]}
+  return { set: state.sets[ownProps.match.params.id]}
 };
 
 export default connect(mapStateToProps, {
-  fetchStream,
-  deleteStream } )(StreamDelete);
+  fetchSet,
+  deleteSet } )(SetDelete);

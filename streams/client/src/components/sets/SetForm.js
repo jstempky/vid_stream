@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 
-class StreamForm extends React.Component {
+class SetForm extends React.Component {
   renderError({ error, touched }) {
     if(touched && error) {
       return (
@@ -33,14 +33,19 @@ class StreamForm extends React.Component {
         className="ui form error"
       >
         <Field
-          name="title"
+          name="exercise"
           component={this.renderInput}
-          label="Enter Title"
+          label="Enter Exercise"
         />
         <Field
-          name="description"
+          name="weight"
           component={this.renderInput}
-          label="Enter description"
+          label="Enter weight"
+        />
+        <Field
+          name="reps"
+          component={this.renderInput}
+          label="Enter reps"
         />
         <button className="ui button primary">Submit</button>
       </form>
@@ -51,18 +56,20 @@ class StreamForm extends React.Component {
 const validate = (formValues) => {
   const errors = {};
 
-  if (!formValues.title) {
-    errors.title="You must enter a title.";
+  if (!formValues.exercise) {
+    errors.title="You must enter an exercise.";
   }
-
-  if (!formValues.description) {
-    errors.description = "You must enter a description.";
+  if (!formValues.weight) {
+    errors.title="You must enter an exercise.";
+  }
+  if (!formValues.reps) {
+    errors.title="You must enter an exercise.";
   }
 
   return errors;
 };
 
 export default reduxForm({
-  form: 'streamForm',
+  form: 'setForm',
   validate
-})(StreamForm);
+})(SetForm);

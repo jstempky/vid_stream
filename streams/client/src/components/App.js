@@ -3,11 +3,11 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 import Header from './Header'
 
-import StreamCreate from './streams/StreamCreate';
-import StreamEdit from './streams/StreamEdit';
-import StreamDelete from './streams/StreamDelete';
-import StreamShow from './streams/StreamShow';
-import StreamList from './streams/StreamList';
+import SetCreate from './sets/SetCreate';
+import SetEdit from './sets/SetEdit';
+import SetDelete from './sets/SetDelete';
+import SetShow from './sets/SetShow';
+import SetList from './sets/SetList';
 
 import history from '../history';
 
@@ -20,11 +20,11 @@ const App = () => {
         <div>
           <Header />
           <Switch>
-            <Route path="/" exact component={StreamList} />
-            <Route path="/streams/new" exact component={StreamCreate} />
-            <Route path="/streams/edit/:id" exact component={StreamEdit} />
-            <Route path="/streams/delete/:id" exact component={StreamDelete} />
-            <Route path="/streams/:id" exact component={StreamShow} />
+            <Route path="/" exact component={SetList} />
+            <Route path="/sets/new" exact component={SetCreate} />
+            <Route path="/sets/edit/:id" exact component={SetEdit} />
+            <Route path="/sets/delete/:id" exact component={SetDelete} />
+            <Route path="/sets/:id" exact component={SetShow} />
           </Switch>
         </div>
       </Router>

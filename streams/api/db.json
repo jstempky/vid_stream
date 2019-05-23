@@ -1,20 +1,16 @@
 {
-  "streams": [
+  "sets": [
     {
-      "title": "Jacob",
-      "description": "is not nice?",
-      "userId": "114926404827810987304",
-      "id": 2
-    },
-    {
-      "title": "after",
-      "description": "refactor",
+      "exercise": "Squats",
+      "weight": "225",
+      "reps": "15",
       "userId": "114926404827810987304",
       "id": 3
     },
     {
-      "title": "Jacob",
-      "description": "is totes not nice",
+      "exercise": "Bench Press",
+      "weight": "225",
+      "reps": "10",
       "userId": "114926404827810987304",
       "id": 4
     }

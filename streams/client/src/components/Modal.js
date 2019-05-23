@@ -11,7 +11,7 @@ const Modal = props => {
         onClick={(e)=> e.stopPropagation()}
         className="ui standard modal visible active"
       >
-        <div className="header">{props.title}</div>
+        <div className="header">{props.exercise}</div>
         <div className="content">{props.content}</div>
         <div className="actions">{props.actions}</div>
       </div>
